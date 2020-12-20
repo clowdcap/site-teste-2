@@ -12,8 +12,8 @@
     </head>
     <body>
 
-    <header>
-            <div class="center">
+    <header class="header-login">
+            <div class="center-2">
                 <div class="logo left">
                     <a style="text-decoration: none; color:white" href="<?php echo INCLUDE_PATH; ?>"> José <span>Marinho</span></a>
                 </div> <!--logo-->
@@ -53,10 +53,15 @@
                     $sql = MySql::conectar()->prepare("SELECT * FROM `tb_admin.usuarios` WHERE user = ? AND password = ?");
                     $sql->execute(array($user,$password));
 
+                    $info = $sql->fetch();
                     if($sql->rowCount() == 1){
                         $_SESSION['login'] = true;
                         $_SESSION['user'] = $user;
                         $_SESSION['passowrd'] = $password;
+                        $_SESSION['cargo'] = $info['cargo'];
+                        $_SESSION['nome'] = $info['nome'];
+                        $_SESSION['img'] = $info['img'];
+
                         header('Location: '.INCLUDE_PATH_PAINEL);
                         die();
                     } else {

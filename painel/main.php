@@ -15,29 +15,75 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <!-- Export -->
-        <link rel="stylesheet" href="<?php echo INCLUDE_PATH_PAINEL; ?>assets/css/style.css" type="text/css">
+        <link rel="stylesheet" href="<?php echo INCLUDE_PATH_PAINEL; ?>assets/css/style.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/31283f79ba.js" crossorigin="anonymous"></script>
     </head>
+
     <body>
+        <div class="menu">
+            <div class="menu-wraper">
+                <div class="box-usuario">
 
-        <div class="menu-painel">
-            
-        </div> <!--menu-painel-->
+                    <?php
+                        if($_SESSION['img'] == ''){ ?>
+                    
+                        <div class="avatar-usuario">
+                            <i class="fa fa-user"></i>
+                        </div> <!--avatar usuario-->
 
-            <header class='header-menu'>
-                <div class="center">
-                  
+                    <?php } else { ?>  
 
-                    <div class="loggout">
-                        <a href="<?php echo INCLUDE_PATH_PAINEL; ?>?loggout"><i class="fas fa-sign-out-alt"></i></a>
-                    </div> <!--loggout-->
-                </div> <!--center-->
+                        <div class="imagem-usuario">
+                        <img src="<?php echo INCLUDE_PATH_PAINEL?>uploads/<?php echo $_SESSION['img'] ?>" alt="Avatar"/>
+                        </div> <!--avatar usuario-->
+
+                    <?php } ?>
+
+                    <div class="nome-usuario">
+                        <p><?php echo $_SESSION['nome']; ?></p>
+                        <p><?php echo pegaCargo($_SESSION['cargo']); ?></p>
+                    </div> <!--nome-usuario-->
+        
+                </div> <!--box-usuario-->
+            </div> <!--menu-wraper-->
+        </div> <!--menu-->
+
+        <header>
+            <div class="center">
+                <div class="menu-btn">
+                    <i class="fa fa-bars"></i>
+                </div> <!--menu-btn-->
+                <div class="loggout">
+                    <a href="<?php echo INCLUDE_PATH_PAINEL ?>?loggout"><i class="fa fa-window-close"><span>SAIR</span></i></a>
+                </div> <!--loggout-->
 
                 <div class="clear"></div>
-            </header>
+            </div> <!--center-->
+        </header>
 
-        <div class="clear"></div>
+        <div class="content">
+            
+            <div class="box-content left w100">
+                
+            </div> <!--box-content-->
+            
+            <!--<div class="box-content left w100">
+                
+            </div> 
+
+            <div class="box-content left w50">
+                
+            </div> 
+            <div class="box-content right w50">
+                
+            </div>-->
+
+            <div class="clear"></div>
+        </div> <!--content-->
+
+        <script src="<?php echo INCLUDE_PATH ?>assets/js/jquery.js"></script>
+        <script src="<?php echo INCLUDE_PATH_PAINEL ?>assets/js/main.js"></script>
     </body>
 </html>

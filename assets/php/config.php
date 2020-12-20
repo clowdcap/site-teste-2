@@ -16,4 +16,16 @@
     define('PASSWORD', '');
     define('DATABASE','site-teste-2');
 
+    //funcoes
+
+
+    function pegaCargo($cargo) {
+        $arr = [
+            '0' => 'Normal',
+            '1' => 'Sub Administrador',
+            '2' => 'Administrador'];
+
+            return $arr[$cargo];
+        }
+
 ?>
