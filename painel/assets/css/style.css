@@ -6,8 +6,13 @@
 }
 
 html, body {
+    
     height: 100%;
     background: rgb(226, 226, 226);
+}
+
+body {
+    overflow-x: hidden;
 }
 
 .w100{
@@ -96,6 +101,7 @@ nav.desktop a:hover {
     font-weight: 600;
     color: #585fad;
     padding-bottom: 5px;
+    text-align: center;
 }
 
 .center h3 {
@@ -103,6 +109,7 @@ nav.desktop a:hover {
     font-weight: 100;
     color: dimgray;
     padding-bottom: 20px;
+    text-align: center;
 }
 
 .box-login{
@@ -173,14 +180,14 @@ div.menu {
     left: 0;
     top: 0;
     position: fixed;
+    display: block;
 }
 
 header{
     padding: 15px 0;
-    margin-left: 300px;
     background: #585fad;
     width: calc(100% - 300px);
-    float: left;
+    float: right;
     position: relative;
 }
 
@@ -263,6 +270,8 @@ header{
 
 @media screen and (max-width: 768px){
     .menu {
+        width: 0;
+        padding: 0;
         display: none;
     }
 
