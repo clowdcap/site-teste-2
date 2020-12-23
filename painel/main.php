@@ -36,23 +36,30 @@
                     <?php } else { ?>  
 
                         <div class="imagem-usuario">
-                        <img src="<?php echo INCLUDE_PATH_PAINEL?>uploads/<?php echo $_SESSION['img'] ?>" alt="Avatar"/>
+                        <img src="<?php echo INCLUDE_PATH_PAINEL?>assets/uploads/<?php echo $_SESSION['img'] ?>" alt="Avatar"/>
                         </div> <!--avatar usuario-->
 
                     <?php } ?>
 
                     <div class="nome-usuario">
                         <p><?php echo $_SESSION['nome']; ?></p>
-                        <p><?php echo pegaCargo($_SESSION['cargo']); ?></p>
+                        <p class="cargo"><?php echo pegaCargo($_SESSION['cargo']); ?></p>
                     </div> <!--nome-usuario-->
                 </div> <!--box-usuario-->
                 <div class="items-menu">
                     <h2>Cadastro</h2>
                     <a href="">Cadastrar Depoimento</a>
                     <a href="">Cadastrar Serviço</a>
+                    <a href="">Cadastrar Slides</a>
                     <h2>Gestão</h2>
                     <a href="">Listar Depoimentos</a>
                     <a href="">Listar Serviços</a>
+                    <a href="">Listar Slides</a>
+                    <h2>Administração do Painel</h2>
+                    <a href="">Editar Usuário</a>
+                    <a href="">Adicionar Usuários</a>
+                    <h2>Configuração Geral</h2>
+                    <a href="">Editar</a>
                 </div> <!--items-menu-->
             </div> <!--menu-wraper-->
         </div> <!--menu-->
@@ -92,7 +99,7 @@
 
                     <div class="box-metrica-single">
                         <div class="box-metrica-wraper">
-                            <h2>Visitas Hoje</h2>
+                            <h2>Total de Visitas Hoje</h2>
                             <p>3</p>
                         </div> <!--box-metrica-wraper-->
                     </div> <!--box-metrica-single-->
@@ -111,8 +118,8 @@
                 
             </div>-->
 
-            <div class="clear"></div>
         </div> <!--content-->
+        <div class="clear"></div>
 
         <script src="<?php echo INCLUDE_PATH ?>assets/js/jquery.js"></script>
         <script src="<?php echo INCLUDE_PATH_PAINEL ?>assets/js/main.js"></script>
