@@ -28,11 +28,10 @@
 
                     <?php
                         if($_SESSION['img'] == ''){ ?>
-                    
+            
                         <div class="avatar-usuario">
                             <i class="fa fa-user"></i>
                         </div> <!--avatar usuario-->
-
                     <?php } else { ?>  
 
                         <div class="imagem-usuario">
@@ -48,7 +47,7 @@
                 </div> <!--box-usuario-->
                 <div class="items-menu">
                     <h2>Cadastro</h2>
-                    <a href="">Cadastrar Depoimento</a>
+                    <a href="<?php echo INCLUDE_PATH_PAINEL?>cadastrar-depoimento">Cadastrar Depoimento</a>
                     <a href="">Cadastrar Serviço</a>
                     <a href="">Cadastrar Slides</a>
                     <h2>Gestão</h2>
@@ -69,7 +68,10 @@
                 <div class="menu-btn">
                     <i class="fa fa-bars"></i>
                 </div> <!--menu-btn-->
+
                 <div class="loggout">
+                    <a href="<?php echo INCLUDE_PATH_PAINEL ?>"><i class="fa fa-home"></i><span>Página Inicial</span></a>
+                    <div style="padding: 0 20px; display: inline;"></div>
                     <a href="<?php echo INCLUDE_PATH_PAINEL ?>?loggout"><i class="fa fa-window-close"><span>SAIR</span></i></a>
                 </div> <!--loggout-->
 
@@ -79,47 +81,9 @@
 
         <div class="content">
             
-            <div class="box-content left w100">
-                <h2><i class="fa fa-home"></i> Painel de Controle - <?php echo $_SESSION['nome'] ?></h2>
-                
-                <div class="box-metricas">
-                    <div class="box-metrica-single">
-                        <div class="box-metrica-wraper">
-                            <h2>Usuários Online</h2>
-                            <p>10</p>
-                        </div> <!--box-metrica-wraper-->
-                    </div> <!--box-metrica-single-->
-
-                    <div class="box-metrica-single">
-                        <div class="box-metrica-wraper">
-                            <h2>Total de Visitas</h2>
-                            <p>100</p>
-                        </div> <!--box-metrica-wraper-->
-                    </div> <!--box-metrica-single-->
-
-                    <div class="box-metrica-single">
-                        <div class="box-metrica-wraper">
-                            <h2>Total de Visitas Hoje</h2>
-                            <p>3</p>
-                        </div> <!--box-metrica-wraper-->
-                    </div> <!--box-metrica-single-->
-                        
-                </div> <!--box-metricas-->
-            </div> <!--box-content-->
-            
-            <!--<div class="box-content left w100">
-                
-            </div> 
-
-            <div class="box-content left w50">
-                
-            </div> 
-            <div class="box-content right w50">
-                
-            </div>-->
+            <?php Painel::carregarPagina(); ?>
 
         </div> <!--content-->
-        <div class="clear"></div>
 
         <script src="<?php echo INCLUDE_PATH ?>assets/js/jquery.js"></script>
         <script src="<?php echo INCLUDE_PATH_PAINEL ?>assets/js/main.js"></script>

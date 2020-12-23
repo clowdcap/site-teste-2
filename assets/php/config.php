@@ -1,5 +1,7 @@
 <?php
     session_start();
+    date_default_timezone_set('America/Sao_Paulo');
+
     $autoload = function($class){
         
         include('../class/'.$class.'.php');
@@ -15,6 +17,9 @@
     define('USER','root');
     define('PASSWORD', '');
     define('DATABASE','site-teste-2');
+
+    // Constante para o painel de controle
+    define('NOME_EMPRESA', 'JM Arquitetura');
 
     //funcoes
 

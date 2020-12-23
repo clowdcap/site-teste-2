@@ -1,4 +1,5 @@
 <?php include('assets/php/config.php'); ?>
+<?php Site::updateUsuarioOnline(); ?>
 
 <!DOCTYPE html>
 
