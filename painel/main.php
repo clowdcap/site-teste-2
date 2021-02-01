@@ -68,17 +68,6 @@
             <div class="box-content left w100">
                 
             </div> <!--box-content-->
-            
-            <!--<div class="box-content left w100">
-                
-            </div> 
-
-            <div class="box-content left w50">
-                
-            </div> 
-            <div class="box-content right w50">
-                
-            </div>-->
 
             <div class="clear"></div>
         </div> <!--content-->
