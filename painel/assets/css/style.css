@@ -6,8 +6,13 @@
 }
 
 html, body {
+    
     height: 100%;
     background: rgb(226, 226, 226);
+}
+
+body {
+    overflow-x: hidden;
 }
 
 .w100{
@@ -96,6 +101,7 @@ nav.desktop a:hover {
     font-weight: 600;
     color: #585fad;
     padding-bottom: 5px;
+    text-align: center;
 }
 
 .center h3 {
@@ -103,6 +109,7 @@ nav.desktop a:hover {
     font-weight: 100;
     color: dimgray;
     padding-bottom: 20px;
+    text-align: center;
 }
 
 .box-login{
@@ -173,14 +180,14 @@ div.menu {
     left: 0;
     top: 0;
     position: fixed;
+    display: block;
 }
 
 header{
     padding: 15px 0;
-    margin-left: 300px;
     background: #585fad;
     width: calc(100% - 300px);
-    float: left;
+    float: right;
     position: relative;
 }
 
@@ -190,6 +197,8 @@ header{
 
 .loggout a{
     color: white;
+    padding: 0 20px;
+    position: relative;
     font-size: 20px;
     text-decoration: none;
 }
@@ -231,6 +240,24 @@ header{
     color: white;
 }
 
+.imagem-usuario {
+    width: 130px;
+    height: 130px;
+    display: inline-block;
+    position: relative;
+    border: 3px solid #444;
+    border-radius: 50%;
+}
+
+.imagem-usuario img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    border-radius: 50%;
+    height: 100%;
+}
+
 .nome-usuario {
     text-align: center;
     margin-top: 10px;
@@ -238,31 +265,132 @@ header{
 
 .nome-usuario p{
     color: white;
+    font-size: 20px;
+    font-weight: 500;
+}
 
+.nome-usuario p.cargo{
+    color: white;
     font-size: 16px;
     font-weight: 200;
+    margin-bottom: 20px;
 }
 
 /* Conteudo principal do painel */
 
 .content{
     width: calc(100% - 300px);
-    position: relative;
+    position: absolute;
     left: 300px;
     top: 57px;
     padding: 10px;
+    
 }
 
 .box-content {
     background: white;
     padding: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+.box-content h2 {
+    font-weight: 300;
+    font-size: 23px;
+}
+
+/* Box Metricas */
+
+.box-metricas {
+    margin-top: 16px;
+    padding: 0 15px;
+}
+
+.box-metrica-single {
+    float: left;
+    position: relative;
+    width: 33.33%;
+    background: #575975;
+    border: 1px solid #444;
+}
+
+.box-metricas .box-metrica-single:nth-of-type(2){
+    background: #585fad;
+}
+
+.box-metricas .box-metrica-single:nth-of-type(3){
+    background: #4753da;
+}
+
+.box-metrica-wraper {
+    padding: 10px 20px;
+    text-align: left;
+    color: white;
+}
+
+.box-metrica-wraper h2{
+    font-size: 26px;
+    padding: 10px 0;
+}
+
+.items-menu {
+    display: inline-grid;
+}
+
+.items-menu h2 {
+    width: 280px;
+    background-color: #585fad;
+    border: 1px solid #444;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 5px 0;
+    color: #333333;
+}
+
+.items-menu a {
+    padding: 10px 0;
+    border-bottom: 1px solid #444;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: left;
+    text-decoration: none;
+    color: white;
+
+}
+
+
+/* TABELA RESPONSIVA */
+
+.table-responsive {
+    max-width: 1280px;
+    margin: 20px auto;
+}
+
+.table-responsive .row:nth-of-type(1) {
+    font-weight: bold;
+    border-bottom: 1px solid #999 ;
+}
+
+.table-responsive .row {
+    color: #777;
+    padding: 8px 0;
+    text-align: center;
+}
+
+
+
+
+.col{
+    float: left;
+    width: 50%;
 }
 
 /* RESPONSIVO */
 
 @media screen and (max-width: 768px){
     .menu {
+        width: 0;
+        padding: 0;
         display: none;
     }
 
@@ -277,3 +405,17 @@ header{
         margin-left: 0;
     }
 }
+
+@media screen and (max-width: 500px){
+    .box-single-metrica {
+        width: 100%;
+        padding-top: 40%;
+    }
+}
+
+@media screen and (max-width: 430px){
+    .menu-wraper{
+        width: 200px;
+    }
+}
+

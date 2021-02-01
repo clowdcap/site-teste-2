@@ -1,8 +1,9 @@
 <?php include('assets/php/config.php'); ?>
+<?php Site::updateUsuarioOnline(); ?>
 
 <!DOCTYPE html>
 
-<html>
+<html lang="pt-BR">
     <head>
         <meta charset="utf-8">
         <title>Jose Marinho</title>
@@ -97,11 +98,8 @@
         <script src="<?php echo INCLUDE_PATH; ?>assets/js/scripts.js"></script>
 
 
-        <?php
-            if($url == 'home' || $url == ''){
-        ?>
         <script src="<?php echo INCLUDE_PATH; ?>assets/js/slider.js"></script>
-        <?php }?>
+        
 
 
         <?php

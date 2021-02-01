@@ -28,25 +28,38 @@
 
                     <?php
                         if($_SESSION['img'] == ''){ ?>
-                    
+            
                         <div class="avatar-usuario">
                             <i class="fa fa-user"></i>
                         </div> <!--avatar usuario-->
-
                     <?php } else { ?>  
 
                         <div class="imagem-usuario">
-                        <img src="<?php echo INCLUDE_PATH_PAINEL?>uploads/<?php echo $_SESSION['img'] ?>" alt="Avatar"/>
+                        <img src="<?php echo INCLUDE_PATH_PAINEL?>assets/uploads/<?php echo $_SESSION['img'] ?>" alt="Avatar"/>
                         </div> <!--avatar usuario-->
 
                     <?php } ?>
 
                     <div class="nome-usuario">
                         <p><?php echo $_SESSION['nome']; ?></p>
-                        <p><?php echo pegaCargo($_SESSION['cargo']); ?></p>
+                        <p class="cargo"><?php echo pegaCargo($_SESSION['cargo']); ?></p>
                     </div> <!--nome-usuario-->
-        
                 </div> <!--box-usuario-->
+                <div class="items-menu">
+                    <h2>Cadastro</h2>
+                    <a href="<?php echo INCLUDE_PATH_PAINEL?>cadastrar-depoimento">Cadastrar Depoimento</a>
+                    <a href="">Cadastrar Serviço</a>
+                    <a href="">Cadastrar Slides</a>
+                    <h2>Gestão</h2>
+                    <a href="">Listar Depoimentos</a>
+                    <a href="">Listar Serviços</a>
+                    <a href="">Listar Slides</a>
+                    <h2>Administração do Painel</h2>
+                    <a href="">Editar Usuário</a>
+                    <a href="">Adicionar Usuários</a>
+                    <h2>Configuração Geral</h2>
+                    <a href="">Editar</a>
+                </div> <!--items-menu-->
             </div> <!--menu-wraper-->
         </div> <!--menu-->
 
@@ -55,7 +68,10 @@
                 <div class="menu-btn">
                     <i class="fa fa-bars"></i>
                 </div> <!--menu-btn-->
+
                 <div class="loggout">
+                    <a href="<?php echo INCLUDE_PATH_PAINEL ?>"><i class="fa fa-home"></i><span>Página Inicial</span></a>
+                    <div style="padding: 0 20px; display: inline;"></div>
                     <a href="<?php echo INCLUDE_PATH_PAINEL ?>?loggout"><i class="fa fa-window-close"><span>SAIR</span></i></a>
                 </div> <!--loggout-->
 
@@ -64,13 +80,7 @@
         </header>
 
         <div class="content">
-            
-            <div class="box-content left w100">
-                
-            </div> <!--box-content-->
-
-            <div class="clear"></div>
-        </div> <!--content-->
+        
 
         <script src="<?php echo INCLUDE_PATH ?>assets/js/jquery.js"></script>
         <script src="<?php echo INCLUDE_PATH_PAINEL ?>assets/js/main.js"></script>
